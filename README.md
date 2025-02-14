@@ -1,8 +1,22 @@
-# React + Vite
+Install React
+npm create vite@latest my-vue-app -- --template react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Install Redux
+npm install @reduxjs/toolkit react-redux
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create "redux" folder (Its a good way)
+    import { configureStore } from "@reduxjs/toolkit";
+
+    export const store = configureStore({
+    reducer: {}
+    })
+
+Connect with redux - main.jsx (Wrap App with Redux provider)
+
+    import { Provider } from 'react-redux'
+    import { store } from './redux/store.js'
+
+    <Provider store={store}>
+      <App />
+    </Provider>
