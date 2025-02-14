@@ -1,7 +1,9 @@
 Install React
+
 npm create vite@latest my-vue-app -- --template react
 
 Install Redux
+
 npm install @reduxjs/toolkit react-redux
 
 
@@ -20,3 +22,6 @@ Connect with redux - main.jsx (Wrap App with Redux provider)
     <Provider store={store}>
       <App />
     </Provider>
+
+We can add Redux devtools as Crome Extension
+    Check inspect Redux - INIT (init will show if redux connect successfully)
